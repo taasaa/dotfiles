@@ -1,7 +1,7 @@
 [user]
-	name = CHANGE
-	email = CHANGE
+	email = taasaa@gmail.com
+	name = Michael Mazyar
 [github]
-	user = CHANGE
-[heroku]
-	account = CHANGE
+	user = taasaa
+[push]
+	default = current

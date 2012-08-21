@@ -1,17 +1,15 @@
-"set guifont=Inconsolata-dz\ for\ Powerline:h16
-"set guifont=Monaco:h16
-set guifont=Mensch\ Regular\ for\ Powerline:h16
-let g:Powerline_symbols = 'fancy'
-"let g:Powerline_symbols = 'compatible'
+set guifont=Consolas:h14
+set linespace=2
 
-set cul
-set foldcolumn=4
+"colorscheme vividchalk
+colorscheme solarized
+set background=dark
 
-if has('gui_running')
-  set background=dark
-else
-  set background=dark
-end
-"colorscheme solarized
-"colorscheme buttercream
-colorscheme vividchalk
+"let g:acp_enableAtStartup = 0
+
+let g:indent_guides_color_change_percent = 5
+let g:indent_guides_guide_size = 1
+let g:browser = "open "
+
+" disable mized mode with MRU, open buffers and files, it's confusing
+let g:ctrlp_cmd = 'CtrlP'
