@@ -1,5 +1,5 @@
 # adding mysql gynamic libraries to library lookup path, http://lightyearsoftware.com/2011/02/mysql-5-5-on-mac-os-x/
-export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+#export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 alias bb="afplay /System/Library/Sounds/Glass.aiff"
 
@@ -12,7 +12,7 @@ alias gti='git'
 alias gt='git'
 alias aria='aria2c -s 10 -x 10 -k 1M'
 
-prompt fancy
+prompt fancy_colors
 
 NVMRC=~/.nvm/nvm.sh
 if [ -e ${NVMRC} ]; then
@@ -20,3 +20,4 @@ if [ -e ${NVMRC} ]; then
 fi
 
 export PGHOST=localhost
+fpath=(/usr/local/share/zsh-completions $fpath)
