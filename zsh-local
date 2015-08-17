@@ -1,6 +1,3 @@
-# adding mysql gynamic libraries to library lookup path, http://lightyearsoftware.com/2011/02/mysql-5-5-on-mac-os-x/
-#export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
-
 alias bb="afplay /System/Library/Sounds/Glass.aiff"
 
 export EDITOR="mvim -f"
@@ -12,10 +9,12 @@ alias gti='git'
 alias gt='git'
 alias aria='aria2c -s 10 -x 10 -k 1M'
 
-alias rs='rails server'
-alias rc='rails console'
+alias rs='rails s'
+alias rc='rails c'
 
-alias rm_merged_branches='git branch --merged | grep -v `git symbolic-ref HEAD --short` | xargs git branch -d'
+alias git_rm_merged_branches='git branch --merged | grep -vw `git symbolic-ref HEAD --short` | xargs git branch -d'
+
+alias redis="redis-server /usr/local/etc/redis.conf &"
 
 prompt fancy
 
@@ -24,5 +23,15 @@ if [ -e ${NVMRC} ]; then
   source ${NVMRC}
 fi
 
-export PGHOST=localhost
-fpath=(/usr/local/share/zsh-completions $fpath)
+DB_ENV_SH=~/bin/db_env.sh
+if [ -e $DB_ENV_SH ]; then
+  source $DB_ENV_SH
+  db_local > /dev/null
+fi
+
+AFILE=~/.zsh/aliases.sh
+if [ -e $AFILE ]; then
+  source $AFILE
+fi
+
+export DOCKER_HOST=localhost

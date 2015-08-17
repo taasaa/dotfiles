@@ -27,8 +27,5 @@
 [help]
     autocorrect = 1
 
-[branch]
-      autosetuprebase = always
-
 [diff]
       renames = copy
